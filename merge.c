@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "function.h"
 #define N 16
 
 void MergeSort(int array[], int start, int end)
