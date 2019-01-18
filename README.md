@@ -9,4 +9,5 @@
 |gnome.c|ノームソート|
 |merge.c|マージソート|
 |quick.c|クイックソート|
-|ahaker.c|シェーカーソート|
+|select.c|選択ソート|
+|shaker.c|シェーカーソート|
