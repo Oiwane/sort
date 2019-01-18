@@ -1,21 +1,6 @@
 #include <stdio.h>
 #define N 16
 
-void print_array(int a[], int n)
-{
-  int i;
-  
-  for(i = 0; i < n; i++){
-    printf("%d", a[i]);
-    if(i < n - 1){
-      printf(",");
-    }
-  }
-  printf("\n");
-
-  return;
-}
-
 void MergeSort(int array[], int start, int end)
 {
   int tmp[N] = {0};
@@ -56,8 +41,9 @@ int main(void)
  int a[] = {3,1,4,7,2,6,9,5,8};
  int n = sizeof(a)/sizeof(a[0]);
  
+ //マージソート
  MergeSort(a, 0, n);
- 
+ //結果表示
  print_array(a, n);
  
  return 0;
