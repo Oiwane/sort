@@ -3,11 +3,11 @@
 
 void BubbleSort(int a[], int n)
 {
-    int i,j;
-
-    for(i = 0; i < n; i++){
-        for(j = n - 1; j > 0; j--){
-            if(a[j] < a[j - 1]) swap(a + j, a + j - 1);
+    for(int i = 0; i < n; i++){
+        for(int j = n - 1; j > 0; j--){
+            if(a[j] < a[j - 1]){
+                swap(a + j, a + j - 1);
+            }
         }
     }
 
@@ -19,13 +19,10 @@ int main(void)
     int a[] = {3,1,4,7,2,6,9,5,8};
     int n = sizeof(a)/sizeof(a[0]);
 
+    //バブルソート
     BubbleSort(a, n);
-
-    for(int i = 0; i < n; i++){
-        printf("%d", a[i]);
-        if(i < n - 1) printf(",");
-    }
-    printf("\n");
-
+    //結果表示
+    print_array(a, n);
+    
     return 0;
 }
