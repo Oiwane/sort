@@ -10,16 +10,19 @@ void QuickSort(int a[], int n)
   int n1 = 0, n2 = 0;
   int i, pivot;
   
+  //nが1だったら分割できないのでreturn
   if(n == 1){
     return;
   }
   
+  //分割基準となる数を決定
   if(a[0] > a[1]){
     pivot = a[0];
   }else{
     pivot = a[1];
   }
 
+  //pivotの値で仕分け
   for(i = 0; i < n; i++){
     if(a[i] < pivot){
       b1[n1] = a[i];
@@ -30,9 +33,11 @@ void QuickSort(int a[], int n)
     }
   }
   
+  //再帰
   QuickSort(b1, n1);
   QuickSort(b2, n2);
   
+  //b1の値がb2の値よりも小さいので先にaへ入れる
   for(i = 0; i < n1; i++){
     a[i] = b1[i];
   }
@@ -48,8 +53,9 @@ int main(void)
   int a[] = {3,1,4,7,2,6,9,5,8};
   int n = sizeof(a)/sizeof(a[0]);
   
+  //クイックソート
   QuickSort(a, n);
-  
+  //結果表示
   print_array(a, n);
   
   return 0;
